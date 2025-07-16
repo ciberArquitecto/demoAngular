@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'demo';
 
   public fun() {
-    console.log('hola');
+    console.log('hola jeje');
   }
 }
