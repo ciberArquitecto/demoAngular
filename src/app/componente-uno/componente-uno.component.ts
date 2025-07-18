@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComponenteUnoService } from './componente-uno.service';
 
 @Component({
   selector: 'app-componente-uno',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponenteUnoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private servicio: ComponenteUnoService) {
+
+  }
 
   ngOnInit(): void {
+  }
+
+  public guardar() {
+    this.servicio.guardar();
   }
 
 }
