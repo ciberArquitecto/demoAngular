@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +14,12 @@ export class ComponenteUnoService {
 
   constructor(private http: HttpClient) { }
 
-  public guardar() {
-    this.http.get(this.urlBase + this.urlguardar);
+  public guardar(): Observable<String> {
+    return this.http.get<String>(this.urlBase + this.urlguardar);
   }
 
   public borrar() {
-    this.http.get(this.urlBase + this.urlBorrar);
+    return this.http.get(this.urlBase + this.urlBorrar);
   }
 
 }
