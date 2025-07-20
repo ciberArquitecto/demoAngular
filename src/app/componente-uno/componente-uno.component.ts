@@ -8,7 +8,7 @@ import { ComponenteUnoService } from './componente-uno.service';
 })
 export class ComponenteUnoComponent implements OnInit {
 
-  public id: String | undefined;
+  public id: String = '';
 
   constructor(private servicio: ComponenteUnoService) {
 
